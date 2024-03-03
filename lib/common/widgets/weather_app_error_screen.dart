@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 
 class WeatherAppErrorScreen extends StatelessWidget {
   final void Function() onPressed;
-  const WeatherAppErrorScreen({required this.onPressed, super.key});
+  final String errorMessage;
+  const WeatherAppErrorScreen({
+    required this.onPressed,
+    required this.errorMessage,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +17,13 @@ class WeatherAppErrorScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
-          const Text(
-            "Something went wrong!",
-            style: TextStyle(
+          Text(
+            errorMessage,
+            style: const TextStyle(
               fontSize: 20.0,
             ),
+            textAlign: TextAlign.center,
+            maxLines: 2,
           ),
           const SizedBox(
             height: 12.0,
