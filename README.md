@@ -21,3 +21,7 @@ To run the app, please follow these steps:
 ## Supported Platforms
 
 The app can be run on both Android and iOS devices. It is compatible with various screen sizes and orientations, providing a seamless user experience across different devices and platforms.
+
+## Demo
+
+The app demo video for android and iOS is added into `demo` folder
